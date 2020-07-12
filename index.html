@@ -16,7 +16,7 @@
   <div class="demo"></div>
   <hr />
   <input type="color" v-model="color" />
-  <input type="range" min="1" max="500" value="100" v-model="width" />
+  <input type="range" min="1" max="100" value="20" v-model="width" />
 </div>
 
 <script>
@@ -24,13 +24,13 @@
     el: "#app",
     data: {
       color: "#ffffff",
-      width: 100,
+      width: 20,
     },
     computed: {
       myStyle: function () {
         return {
           backgroundColor: this.color,
-          width: this.width,
+          width: this.width + "%",
         };
       },
     },
