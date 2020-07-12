@@ -1,0 +1,23 @@
+<script src="../vue.js"></script>
+
+<div id="app">
+  <template v-if="show">You can see me!</template>
+  <p>Do you also see me?</p>
+  <button @click="hello()">{{data}}</button>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      show: false,
+      data: false,
+    },
+    methods: {
+      hello() {
+        this.show = !this.show;
+        this.data = !this.data;
+      },
+    },
+  });
+</script>
