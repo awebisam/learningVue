@@ -1,0 +1,38 @@
+<!-- Put this in the HTML section in JSFiddle! -->
+<style>
+  .demo {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: #333;
+  }
+</style>
+
+<script src="./vue.js"></script>
+
+<div id="app">
+  <div class="demo" :style="myStyle"></div>
+  <div class="demo"></div>
+  <div class="demo"></div>
+  <hr />
+  <input type="color" v-model="color" />
+  <input type="range" min="1" max="500" value="100" v-model="width" />
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      color: "#ffffff",
+      width: 100,
+    },
+    computed: {
+      myStyle: function () {
+        return {
+          backgroundColor: this.color,
+          width: this.width,
+        };
+      },
+    },
+  });
+</script>
