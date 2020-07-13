@@ -1,0 +1,22 @@
+<script src="../vue.js"></script>
+
+<div id="app">
+  <template v-for="(person, aa) in persons">
+    <span v-for="(v,k) in person">
+      <p>{{k}} {{v}}</p>
+    </span>
+  </template>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      ingg: ["meat", "fruits", "cookies"],
+      persons: [
+        { name: "Abisam", age: 19, color: "red" },
+        { name: "Badal", age: "unknown", color: "black" },
+      ],
+    },
+  });
+</script>
