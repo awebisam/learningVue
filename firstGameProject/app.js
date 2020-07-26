@@ -27,7 +27,7 @@ new Vue({
       this.monsterAttacks();
     },
     specialAttack: function () {
-      var damage = this.calculateDamage(10, 20);
+      var damage = this.calculateDamage(6, 13);
       this.monsterHealth -= damage;
       this.turns.unshift({
         isPlayer: true,
