@@ -1,13 +1,23 @@
 <template>
     <div>
-        <slot></slot>
+        <slot name="title"></slot>
+        <b>
+            <slot name="content"></slot>
+        </b>
+        <u>
+            <slot name="subtitle">The Subtitle</slot>
+        </u>
     </div>
 </template>
 
 <script>
     export default {
         name: "Quote",
+        deactivated() {
+            console.log('Deactivated')
+        }
     }
+
 </script>
 
 <style scoped>
